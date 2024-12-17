@@ -1,21 +1,116 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+input{
+  display:block;
+  width:200px;
+  margin-bottom: 40px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+#tablo{
+  max-width: 800px;
+  border-collapse: collapse;
+  width: 100%;
+  margin: auto;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+#tablo td, #tablo th{
+  border: 1px solid #ccc;
+  padding: 8px;
+  font-size: 20px;
+}
+
+#tablo tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+#tablo tr:hover{
+  background-color: #ddd;
+}
+
+#tablo i{
+  margin-left: 10px;
+}
+
+#filter{
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+}
+
+#filter input{
+  width: 100%;
+  border: none;
+  background-color: #f2f2f2 ;
+  font-size: 24px;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+.ConverterBox{
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px 0px;
+}
+
+.convertText{
+  margin-bottom: 5px;
+  font-size: 24px;
+  font-weight: 600;
+  color: rgb(95, 91, 91);
+  text-align: center;
+}
+
+.inputField{
+  display: flex;
+  flex-direction: column; /* Stack label and input vertically */
+  align-items: center;
+}
+
+.labelAmount{
+  margin-top: 10px;
+  font-size:medium;
+  font-weight: 500;
+}
+
+
+.inputAmount {
+  border: 1px solid gray; /* Default border */
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  outline: none; /* Remove default outline on focus */
+  transition: border-color 0.3s ease; /* Smooth transition effect */
+}
+
+.inputAmount:focus {
+  border-color: indigo; /* Change border color to blue when focused */
+  box-shadow: 0 0 5px rgba(38, 0, 255, 0.5); /* Optional: Add a blue glow */
+}
+
+
+.convertBtn{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: indigo;
+  color: #f2f2f2;
+  border-radius: 8px;
+  border: none;
+}
+
+.convertBtn:hover{
+  background-color: rgb(107, 3, 182);
+}
+
+.AnswerBox{
+  margin-top: 4px;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: right;
+  color: green;
 }
